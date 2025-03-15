@@ -1,0 +1,9 @@
+{application, erlith,
+ [
+  {description, "Erlith - Erlang-Powered Engine"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib, jsx, mnesia]},
+  {modules, [engine, monitor, generic_behavior, player_behavior]},
+  {env, []}
+ ]}.

@@ -1,0 +1,8 @@
+[{<<"jsx">>,
+  {git,"https://github.com/talentdeficit/jsx.git",
+       {ref,"bb9b3e570a7efe331eed0900c3a5188043a850d7"}},
+  0},
+ {<<"yamerl">>,
+  {git,"https://github.com/yakaz/yamerl.git",
+       {ref,"bdb3b032f972a397c527667254393cd3c8942df3"}},
+  0}].

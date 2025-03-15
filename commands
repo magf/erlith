@@ -1,0 +1,14 @@
+{ok, World} = engine:start("config.json").
+global:register_name(world, World).
+{ok, Json} = file:read_file("config.json"), Config = jsx:decode(Json, [return_maps]), Entities = maps:get(<<"entities">>, Config), lists:foreach(fun(E) -> World ! {spawn, maps:get(<<"id">>, E), E} end, Entities).
+World ! {spawn_random, <<"test_resource">>}.
+
+Monitor = monitor:start(World).
+
+---
+
+ebar3 shell --name node2@127.0.0.1
+
+net_kernel:connect_node('node1@127.0.0.1').
+Monitor = monitor:start(whereis(world)).
+

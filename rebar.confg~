@@ -1,0 +1,3 @@
+{deps, [
+    {yamerl, ".*", {git, "https://github.com/yakaz/yamerl.git", {branch, "master"}}}
+]}.

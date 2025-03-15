@@ -1,0 +1,58 @@
+{
+  "entities": [
+    {
+      "id": "resource_1",
+      "type": "resource",
+      "props": {
+        "mass": 10,
+        "energy": 50
+      },
+      "behavior": "generic_behavior"
+    },
+    {
+      "id": "player_1",
+      "type": "player",
+      "props": {
+        "health": 100,
+        "strength": 15
+      },
+      "behavior": "player_behavior"
+    }
+  ],
+  "behaviors": {
+    "resource": {
+      "module": "resource_behavior",
+      "actions": [
+        "collect",
+        "destroy"
+      ]
+    },
+    "player": {
+      "module": "player_behavior",
+      "actions": [
+        "attack",
+        "move"
+      ]
+    }
+  },
+  "random_templates": {
+    "unknown_resource": {
+      "props": {
+        "mass": {
+          "type": "int",
+          "range": [
+            1,
+            100
+          ]
+        },
+        "energy": {
+          "type": "int",
+          "range": [
+            0,
+            500
+          ]
+        }
+      }
+    }
+  }
+}
